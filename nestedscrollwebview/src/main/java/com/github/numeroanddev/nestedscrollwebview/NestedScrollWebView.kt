@@ -9,7 +9,7 @@ import androidx.core.view.NestedScrollingChildHelper
 import androidx.core.view.ViewCompat
 import kotlin.math.abs
 
-class NestedScrollWebView @JvmOverloads constructor(
+public open class NestedScrollWebView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = android.R.attr.webViewStyle,
