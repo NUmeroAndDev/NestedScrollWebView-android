@@ -27,7 +27,7 @@ dependencyResolutionManagement {
 
 ```kotlin
 dependencies {
-    implementation("com.github.numeroanddev.nestedscrollwebview:nestedscrollwebview:$version")
+    implementation("com.github.NUmeroAndDev:nestedscrollwebview:$version")
 }
 ```
 
