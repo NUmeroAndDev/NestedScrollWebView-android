@@ -1,5 +1,7 @@
 # Android NestedScrollWebView 
 
+[![](https://jitpack.io/v/NUmeroAndDev/NestedScrollWebView-android.svg)](https://jitpack.io/#NUmeroAndDev/NestedScrollWebView-android)
+
 `NestedScrollWebView` is an Android library that provides a custom `WebView` which seamlessly integrates with Android's nested scrolling system.
 
 By implementing `NestedScrollingChild3`, `NestedScrollWebView` allows you to place a `WebView` inside standard nested scrolling parents (like `CoordinatorLayout`, `SwipeRefreshLayout`, and `AppBarLayout`) or Jetpack Compose nested scrolling components, and have scroll events correctly dispatched between them.
