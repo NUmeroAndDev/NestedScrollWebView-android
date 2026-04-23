@@ -36,7 +36,7 @@ afterEvaluate {
 
                 groupId = "com.github.numeroanddev.nestedscrollwebview"
                 artifactId = "nestedscrollwebview"
-                version = "0.1"
+                version = "0.1.1"
             }
         }
     }
