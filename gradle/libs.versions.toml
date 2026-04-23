@@ -5,7 +5,7 @@ ksp = "2.3.4"
 
 lifecycle = "2.10.0"
 compose = "1.10.6"
-material3 = "1.4.0"
+material3 = "1.5.0-alpha17"
 material3Adaptive = "1.2.0"
 
 hilt = "2.59.2"
@@ -22,6 +22,8 @@ androidxCore = "androidx.core:core-ktx:1.18.0"
 androidxCoreSplash = "androidx.core:core-splashscreen:1.2.0"
 androidxNavigationCompose = "androidx.navigation:navigation-compose:2.9.7"
 androidxProfileInstaller = "androidx.profileinstaller:profileinstaller:1.4.1"
+androidxSwipeRefreshLayout = "androidx.swiperefreshlayout:swiperefreshlayout:1.2.0"
+androidxFragmentCompose = "androidx.fragment:fragment-compose:1.8.9"
 
 androidxComposeUi = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 androidxComposeUiTooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
@@ -30,6 +32,8 @@ androidxComposeFoundation = { module = "androidx.compose.foundation:foundation",
 androidxComposeMaterial3 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
 androidxComposeMaterial3Adaptive = { module = "androidx.compose.material3.adaptive:adaptive", version.ref = "material3Adaptive" }
 androidxComposeUiTest = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
+
+material = "com.google.android.material:material:1.14.0-beta01"
 
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }

@@ -57,4 +57,7 @@ dependencies {
     implementation(libs.androidxCore)
     implementation(libs.androidxCoreSplash)
     implementation(libs.androidxProfileInstaller)
+    implementation(libs.androidxSwipeRefreshLayout)
+    implementation(libs.androidxFragmentCompose)
+    implementation(libs.material)
 }
