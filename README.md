@@ -1,6 +1,6 @@
 # Android NestedScrollWebView 
 
-[![](https://jitpack.io/v/NUmeroAndDev/NestedScrollWebView-android.svg)](https://jitpack.io/#NUmeroAndDev/NestedScrollWebView-android)
+[![](https://jitpack.io/v/NUmeroAndDev/nestedscrollwebview.svg)](https://jitpack.io/#NUmeroAndDev/nestedscrollwebview)
 
 `NestedScrollWebView` is an Android library that provides a custom `WebView` which seamlessly integrates with Android's nested scrolling system.
 
