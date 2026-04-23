@@ -22,12 +22,14 @@ fun NavGraphBuilder.sampleListScreen(
     onNavigateComposeVerticalScrollSample: () -> Unit,
     onNavigateComposeHorizontalPagerSample: () -> Unit,
     onNavigateViewVerticalScrollSample: () -> Unit,
+    onNavigateViewHorizontalPagerSample: () -> Unit,
 ) {
     composable(route = sampleListRoute) {
         SampleList(
             onNavigateComposeVerticalScrollSample = onNavigateComposeVerticalScrollSample,
             onNavigateComposeHorizontalPagerSample = onNavigateComposeHorizontalPagerSample,
-            onNavigateViewVerticalScrollSample = onNavigateViewVerticalScrollSample
+            onNavigateViewVerticalScrollSample = onNavigateViewVerticalScrollSample,
+            onNavigateViewHorizontalPagerSample = onNavigateViewHorizontalPagerSample,
         )
     }
 }
@@ -38,6 +40,7 @@ fun SampleList(
     onNavigateComposeVerticalScrollSample: () -> Unit,
     onNavigateComposeHorizontalPagerSample: () -> Unit,
     onNavigateViewVerticalScrollSample: () -> Unit,
+    onNavigateViewHorizontalPagerSample: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
@@ -84,6 +87,16 @@ fun SampleList(
                     modifier = Modifier
                         .fillMaxWidth()
                         .clickable(onClick = onNavigateViewVerticalScrollSample)
+                )
+            }
+            item {
+                ListItem(
+                    headlineContent = {
+                        Text("View Horizontal Pager")
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable(onClick = onNavigateViewHorizontalPagerSample)
                 )
             }
         }

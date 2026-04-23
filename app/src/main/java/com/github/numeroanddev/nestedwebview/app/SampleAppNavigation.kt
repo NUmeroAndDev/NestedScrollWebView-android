@@ -7,7 +7,9 @@ import com.github.numeroanddev.nestedwebview.app.compose.composeHorizontalPagerS
 import com.github.numeroanddev.nestedwebview.app.compose.composeVerticalScrollSampleScreen
 import com.github.numeroanddev.nestedwebview.app.compose.navigateToComposeHorizontalPagerSample
 import com.github.numeroanddev.nestedwebview.app.compose.navigateToComposeVerticalScrollSample
+import com.github.numeroanddev.nestedwebview.app.view.navigateToViewHorizontalPagerSample
 import com.github.numeroanddev.nestedwebview.app.view.navigateToViewVerticalScrollSample
+import com.github.numeroanddev.nestedwebview.app.view.viewHorizontalPagerSampleScreen
 import com.github.numeroanddev.nestedwebview.app.view.viewVerticalScrollSampleScreen
 
 @Composable
@@ -27,10 +29,14 @@ fun SampleAppNavigation(
             },
             onNavigateViewVerticalScrollSample = {
                 navController.navigateToViewVerticalScrollSample()
+            },
+            onNavigateViewHorizontalPagerSample = {
+                navController.navigateToViewHorizontalPagerSample()
             }
         )
         composeVerticalScrollSampleScreen()
         composeHorizontalPagerSampleScreen()
         viewVerticalScrollSampleScreen()
+        viewHorizontalPagerSampleScreen()
     }
 }

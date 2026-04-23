@@ -59,5 +59,6 @@ dependencies {
     implementation(libs.androidxProfileInstaller)
     implementation(libs.androidxSwipeRefreshLayout)
     implementation(libs.androidxFragmentCompose)
+    implementation(libs.androidxViewPager2)
     implementation(libs.material)
 }
