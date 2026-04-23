@@ -53,6 +53,7 @@ class NestedScrollWebView @JvmOverloads constructor(
 
         when (action) {
             MotionEvent.ACTION_DOWN -> {
+                parent.requestDisallowInterceptTouchEvent(true)
                 lastMotionY = y
                 startNestedScroll(ViewCompat.SCROLL_AXIS_VERTICAL, ViewCompat.TYPE_TOUCH)
                 result = super.onTouchEvent(trackedEvent)
@@ -139,6 +140,13 @@ class NestedScrollWebView @JvmOverloads constructor(
 
         trackedEvent.recycle()
         return result
+    }
+
+    override fun onOverScrolled(scrollX: Int, scrollY: Int, clampedX: Boolean, clampedY: Boolean) {
+        if (clampedX || clampedY) {
+            parent.requestDisallowInterceptTouchEvent(false)
+        }
+        super.onOverScrolled(scrollX, scrollY, clampedX, clampedY)
     }
 
     override fun setNestedScrollingEnabled(enabled: Boolean) {
