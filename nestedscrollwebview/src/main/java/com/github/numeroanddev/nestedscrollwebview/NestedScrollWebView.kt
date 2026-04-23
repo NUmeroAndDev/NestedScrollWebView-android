@@ -18,7 +18,7 @@ class NestedScrollWebView @JvmOverloads constructor(
     private val childHelper: NestedScrollingChildHelper = NestedScrollingChildHelper(this)
     private val scrollOffset = IntArray(2)
     private val scrollConsumed = IntArray(2)
-    
+
     private var lastMotionY: Float = 0f
     private var nestedYOffset: Float = 0f
     private var remainderY: Float = 0f
@@ -58,12 +58,21 @@ class NestedScrollWebView @JvmOverloads constructor(
                 result = super.onTouchEvent(trackedEvent)
                 velocityTracker?.addMovement(trackedEvent)
             }
+
             MotionEvent.ACTION_MOVE -> {
                 val deltaY = lastMotionY - y + remainderY
                 var deltaYInt = deltaY.toInt()
                 remainderY = deltaY - deltaYInt
 
-                if (dispatchNestedPreScroll(0, deltaYInt, scrollConsumed, scrollOffset, ViewCompat.TYPE_TOUCH)) {
+                if (
+                    dispatchNestedPreScroll(
+                        0,
+                        deltaYInt,
+                        scrollConsumed,
+                        scrollOffset,
+                        ViewCompat.TYPE_TOUCH
+                    )
+                ) {
                     deltaYInt -= scrollConsumed[1]
                     trackedEvent.offsetLocation(0f, scrollOffset[1].toFloat())
                     nestedYOffset += scrollOffset[1]
@@ -97,6 +106,7 @@ class NestedScrollWebView @JvmOverloads constructor(
                 nestedYOffset += scrollOffset[1]
                 velocityTracker?.addMovement(trackedEvent)
             }
+
             MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
                 velocityTracker?.addMovement(trackedEvent)
                 velocityTracker?.computeCurrentVelocity(1000, maximumVelocity.toFloat())
@@ -121,6 +131,7 @@ class NestedScrollWebView @JvmOverloads constructor(
                 velocityTracker?.recycle()
                 velocityTracker = null
             }
+
             else -> {
                 result = super.onTouchEvent(trackedEvent)
             }
